@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+      }
+    </style>
+    <title>DOM Animation</title>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+      const box = document.getElementById("box");
+      let position = 0;
+
+      function moveBox() {
+        position += 2;
+        box.style.left = position + "px";
+
+        // To'xtatish sharti
+        if (position >= 300) {
+          clearInterval(animation);
+        }
+      }
+
+      const animation = setInterval(moveBox, 10); // Har 10 ms da harakat qilish
+    </script>
+  </body>
+</html>
