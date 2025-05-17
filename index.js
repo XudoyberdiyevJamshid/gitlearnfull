@@ -20,15 +20,6 @@ class BurgerBuilder {
     this.burger.cheese = true;
     return this;
   }
-
-  addSpicy() {
-    this.burger.spicy = true;
-    return this;
-  }
-
-  build() {
-    return this.burger;
-  }
 }
 
 const myBurger = new BurgerBuilder()
